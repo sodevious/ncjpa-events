@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <style type="text/css">
+      :root {
+        --beige: #FEF9E6;
+        --light-purple: #EAE7E6;
+        --dark-purple: #2F1F36;
+      }
+      body {
+        padding: 1rem;
+        background-color: var(--beige);
+        font-size: 16px;
+        text-align: center;
+        color: var(--dark-purple);
+        font-family: "Space Grotesk", sans-serif;
+      }
+      section {
+        background-color: var(--light-purple);
+        padding: 2rem 2rem;
+        margin-bottom: 1rem;
+      }
+      h2 {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-2xl font-bold">NCJPA Events</h1>
+    
+    {% for event in events %}
+      <section>
+        <h2 class="mb-4 text-xl font-bold">{{ event.title }}</h2>
+        <p class="mb-4">{{event.description}}</p>
+        <a href="{{ event.url }}" class="font-bold underline text-blue">
+          {{ event.link_text }}
+        </a>
+      </section>
+    {% endfor %}
+  </body>
+</html>
