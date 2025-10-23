@@ -37,7 +37,9 @@
       <section>
         <h2 class="mb-4 text-xl font-bold">{{ event.title }}</h2>
         <p class="mb-4">{{event.description}}</p>
-        <a href="{{ event.url }}" class="font-bold underline text-blue">
+        <!-- <p class="mb-4">{{event.date}}</p> -->
+        <p class="mb-4">{{event.location}}</p>
+        <a href="{{ event.url }}" target="_blank" class="font-bold underline text-blue">
           {{ event.link_text }}
         </a>
       </section>
