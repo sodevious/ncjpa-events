@@ -10,5 +10,6 @@ export default async function () {
 		duration: "1d", // save for 1 day
 		type: "json", // we’ll parse JSON for you
 	});
+    console.log("Fetched events data from API:", json);
 	return json;
 };
